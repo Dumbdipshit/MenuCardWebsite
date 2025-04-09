@@ -8,20 +8,9 @@
 </head>
 <body>
     <header>
-        <div class="header-bar-container">
-            <div class="header-menu-button-container">
-                    <div class="header-menu-button-bar"></div>
-                    <div class="header-menu-button-bar"></div>
-                    <div class="header-menu-button-bar"></div>
-            </div>
-            <div class="logo-and-name-container">
-                    <h1 class="logo-font">Food</h1>
-            </div>
-            <div class="extra-header-button-container">
-                <div class="extra-header-button"></div>
-                <div class="extra-header-button"></div>
-            </div>
-        </div>
+             
     </header>
+
+    <script src="script/functions.js"></script>
 </body>
 </html>
