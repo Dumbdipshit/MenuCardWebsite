@@ -1,6 +1,10 @@
 <?php
     session_start();   
     include ("connect.php");
+
+    if($_SESSION["logged-in"] == "false"){
+        header("Location: acces-denied.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +13,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -34,7 +37,10 @@
     </header>
 
     <body>
-        
+        <div class="admin-box-container-row">
+            <a class="admin-option-box">Create item</a>
+            <a class="admin-option-box">edit items</a>
+        </div>
     </body>
 </body>
 </html>

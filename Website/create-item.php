@@ -1,8 +1,9 @@
 <?php
-    session_start(); 
+    session_start();   
+    include ("connect.php");
     if($_SESSION["logged-in"] == "false"){
-        header("Location: acces-denied.php");
-    }  
+        header("Location: acces-denied.php")
+    }
 ?>
 
 <!DOCTYPE html>
@@ -10,11 +11,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Face</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<header>
+    <header>
         <div class="header-container-row">
             <h1 class="logo">food</h1>
             <a href="index.php" class="page">menu</a>
@@ -34,12 +35,11 @@
         </div>
     </header>
 
-    <?php
-        echo "Youre now logged in as: ". $_SESSION["user"];
-    ?>
-    <p>Log out</p>
-    <form action="log-out-verwerken.php" method="post">
-        <input type="submit" value="Confirm">
-    </form>
+    <body>
+        <div class="admin-box-container-row">
+            <a class="admin-option-box">Create item</a>
+            <a class="admin-option-box">edit items</a>
+        </div>
+    </body>
 </body>
 </html>
