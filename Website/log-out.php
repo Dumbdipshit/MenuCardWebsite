@@ -1,6 +1,5 @@
 <?php
     session_start();   
-    include ("connect.php");
 ?>
 
 <!DOCTYPE html>
@@ -8,12 +7,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Face</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
+<header>
         <div class="header-container-row">
             <h1 class="logo">food</h1>
             <a href="index.php" class="page">menu</a>
@@ -33,8 +31,9 @@
         </div>
     </header>
 
-    <body>
-        
-    </body>
+    <p>Log out</p>
+    <form action="log-out-verwerken.php" method="post">
+        <input type="submit" value="Confirm">
+    </form>
 </body>
 </html>
