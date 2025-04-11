@@ -2,6 +2,9 @@
     session_start();   
     include ("connect.php");
     $_SESSION["logInError"] = "false";
+    if($_SESSION["logged-in"] == "false"){
+        header("Location: acces-denied.php");
+    }
 ?>
 
 <!DOCTYPE html>

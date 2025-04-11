@@ -11,4 +11,5 @@
                 $db->bindParam(":prijs", $_POST['prijs']);
                 $db->bindParam(":omschrijving", $_POST['omschrijving']);
             $db->execute();
+            header("Location: edit-item.php");
 ?>
