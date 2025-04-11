@@ -38,7 +38,7 @@
     </header>
     
     <body>
-        <form action="index.php" method="post">
+        <form action="edit-item.php" method="post">
             <input placeholder="Search" type="text" autocomplete="off" name="search">
         </form>
 
