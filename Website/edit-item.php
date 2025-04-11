@@ -39,7 +39,7 @@
     
     <body>
         <form action="edit-item.php" method="post">
-            <input placeholder="Search" type="text" autocomplete="off" name="search">
+            <input class="search" placeholder="Search" type="text" autocomplete="off" name="search">
         </form>
 
         <div>
