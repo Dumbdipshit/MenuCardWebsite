@@ -55,15 +55,26 @@
                 <?php
                     for($i  = 0; $i < count($result); $i++){
                 ?>
-                <div class="menu-item-info">
-                    <div>
-                        <div><?php echo $result[$i]['id'];?></div>
-                        <div><?php echo $result[$i]['naam'];?></div>
-                        <div><?php echo $result[$i]['prijs'];?></div>
-                    </div>
-                    
-                    <img class="food-image" src="assets/images/<?php echo $result[$i]['id'].".png";?>" alt="<?php echo $result[$i]['naam'];?>">
-                </div>
+                <div class="flex-row">
+                            <div class="flex-column">
+                                <div><?php echo "id: ". $result[$i]["id"]; ?></div>
+                                <div><?php echo "naam: ". $result[$i]["naam"]; ?></div>
+                                <div><?php echo "prijs: ". $result[$i]["prijs"]; ?></div>
+                                <div><?php echo "omschrijving: ". $result[$i]["omschrijving"]; ?></div>
+                                <img class="food-image" src="assets/images/<?php echo $result[$i]['id'].".png";?>" alt="<?php echo $result[$i]['naam'];?>">
+                            </div>
+                            <div class="button-flex-column">
+                                <form method="post" action="remove-item-verwerken.php">
+                                    <input class="hidden-content" type="number" name="id" value="<?php echo $result[$i]["id"]; ?>">
+                                    <input class="delete" type="submit" value="X">
+                                </form>
+
+                                <form method="post" action="update-item-page.php">
+                                    <input class="hidden-content" type="number" name="id" value="<?php echo $result[$i]["id"]; ?>">
+                                    <input class="update" type="submit" value="UP">
+                                </form>
+                            </div>
+                        </div>
                 <?php
                     }
                 ?>

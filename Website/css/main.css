@@ -40,13 +40,15 @@ body{
 .food-image{
     width: 5vw;
     height: fit-content;
+    background-color: lightgray;
 }
 
 .menu-item-container{
     width: 100%;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
+    height: fit-content;
 }
 
 .hidden-content{
@@ -68,5 +70,75 @@ body{
     background-color: black;
     color: white;
     cursor: pointer;
-}   
+} 
+
+.input-menu-items-forum{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.short-input{
+    width: 10vw;
+    height: 1.5vw;
+}
+
+.large-input{
+    width: 30vw;
+    height: 5vw;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 0.3vw;
+    padding: 1vw;
+    outline-width: 0.2vw;
+    outline-color: rgb(59, 60, 61);
+    outline-style: solid;
+    width: fit-content;
+}
+
+.menu-flex-column{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.delete{
+    width: 2vw;
+    height: 2vw;
+    background-color: rgb(250, 73, 73);
+    border-radius: 0.3vw;
+    text-align: center;
+    color: brown;
+    cursor: pointer;
+    transition: 0.2s;
+    border-style: none;
+}.delete:hover{
+    transform: scale(1.2);
+}
+
+.update{
+    width: 2vw;
+    height: 2vw;
+    background-color: lightskyblue;
+    border-radius: 0.3vw;
+    text-align: center;
+    color: cornflowerblue;
+    cursor: pointer;
+    transition: 0.2s;
+    border-style: none;
+}.update:hover{
+    transform: scale(1.2);
+}
+
+
 

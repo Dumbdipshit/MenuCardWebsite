@@ -38,8 +38,8 @@
 
     <body>
         <div class="admin-box-container-row">
-            <a class="admin-option-box">Create item</a>
-            <a class="admin-option-box">edit items</a>
+            <a href="create-item.php" class="admin-option-box">Create item</a>
+            <a href="edit-item.php" class="admin-option-box">edit items</a>
         </div>
     </body>
 </body>

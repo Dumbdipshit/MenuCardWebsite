@@ -2,7 +2,7 @@
     session_start();   
     include ("connect.php");
     if($_SESSION["logged-in"] == "false"){
-        header("Location: acces-denied.php")
+        header("Location: acces-denied.php");
     }
 ?>
 
@@ -36,10 +36,13 @@
     </header>
 
     <body>
-        <div class="admin-box-container-row">
-            <a class="admin-option-box">Create item</a>
-            <a class="admin-option-box">edit items</a>
-        </div>
+        <form class="input-menu-items-forum" action="added-item-verwerken.php" method="post">
+            <input placeholder="id" type="number" id="id" class="short-input" name="id">
+            <input placeholder="name" type="text" autocomplete="off" id="name" class="short-input" name="naam">
+            <input placeholder="price" type="number" min="0.00" max="10000.00" step="0.01" id="price" class="short-input" name="prijs">
+            <textarea placeholder="description" type="text" autocomplete="off" id="description" class="large-input" name="omschrijving"></textarea>
+            <input type="submit" value="confirm" class="short-input">
+        </form>
     </body>
 </body>
 </html>
